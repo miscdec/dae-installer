@@ -103,10 +103,6 @@ notice_installled_tool() {
 }
 
 check_virtualization() {
-    if [ -n "$(uname -r | grep microsoft)" ]; then
-        echo "${RED}error: WSL is not supported!${RESET}"
-        exit 1
-    fi
     if [ "$(virt-what)" = 'openvz' ]; then
         echo "${RED}error: OpenVZ is not supported!${RESET}"
         exit 1
