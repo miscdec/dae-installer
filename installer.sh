@@ -76,13 +76,13 @@ fi
 
 get_download_urls(){
     if [ "$use_cdn" = 'yes' ]; then
-        systemd_service_url="https://cdn.jsdelivr.net/gh/daeuniverse/dae@$latest_version/install/dae.service"
-        openrc_service_url="https://cdn.jsdelivr.net/gh/daeuniverse/dae-installer/OpenRC/dae"
-        dae_url="https://github.abskoop.workers.dev/https://github.com/daeuniverse/dae/releases/download/$latest_version/dae-linux-$MACHINE.zip"
-        dae_hash_url="https://github.abskoop.workers.dev/https://github.com/daeuniverse/dae/releases/download/$latest_version/dae-linux-$MACHINE.zip.dgst"
-        example_config_url="https://cdn.jsdelivr.net/gh/daeuniverse/dae@$latest_version/example.dae"
-        geoip_url="https://cdn.jsdelivr.net/gh/v2rayA/dist-v2ray-rules-dat/geoip.dat"
-        geosite_url="https://cdn.jsdelivr.net/gh/v2rayA/dist-v2ray-rules-dat/geosite.dat"
+        systemd_service_url="https://mirror.ghproxy.com/https://github.com/daeuniverse/dae/raw/$latest_version/install/dae.service"
+        openrc_service_url="https://mirror.ghproxy.com/https://github.com/daeuniverse/dae-installer/raw/main/OpenRC/dae"
+        dae_url="https://mirror.ghproxy.com/https://github.com/daeuniverse/dae/releases/download/$latest_version/dae-linux-$MACHINE.zip"
+        dae_hash_url="https://mirror.ghproxy.com/https://github.com/daeuniverse/dae/releases/download/$latest_version/dae-linux-$MACHINE.zip.dgst"
+        example_config_url="https://mirror.ghproxy.com/https://github.com/daeuniverse/dae/raw/$latest_version/example.dae"
+        geoip_url="https://mirror.ghproxy.com/https://github.com/v2rayA/dist-v2ray-rules-dat/raw/master/geoip.dat"
+        geosite_url="https://mirror.ghproxy.com/https://github.com/v2rayA/dist-v2ray-rules-dat/raw/master/geosite.dat"
     else
         systemd_service_url="https://github.com/daeuniverse/dae/raw/$latest_version/install/dae.service"
         openrc_service_url="https://github.com/daeuniverse/dae-installer/raw/main/OpenRC/dae"
